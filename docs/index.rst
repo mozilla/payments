@@ -6,6 +6,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   design/design.rst
+
 This is the general root documentation source for all Payments for Firefox
 Accounts.
 
