@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    design/design.rst
+   design/ux.rst
 
 This is the general root documentation source for all Payments for Firefox
 Accounts.
