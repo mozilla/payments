@@ -6,6 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   contributing.rst
    design/design.rst
    design/ux.rst
 
