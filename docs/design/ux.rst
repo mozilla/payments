@@ -5,6 +5,8 @@ User experience documentation.
 
 Status: **in draft** expect changes.
 
+.. _purchase-label:
+
 Purchase flow
 -------------
 
