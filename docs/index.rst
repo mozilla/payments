@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    contributing.rst
+   design/overview.rst
    design/api.rst
    design/design.rst
    design/ux.rst
