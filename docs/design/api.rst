@@ -56,7 +56,10 @@ To get a list of all subscriptions:
 Provider API
 ------------
 
-TODO: depends upon the provider we choose.
+How we interact with braintree:
+
+.. image:: start-subscription.png
+
 
 Events
 ------
@@ -71,7 +74,4 @@ emails, or other method, or ignored.
 * Subscription charge failed.
 * Subscription cancelled.
 
-Event listeners
----------------
-
-TODO: would this go out through a queue.
+TODO: figure out how solitude would signal out these events.
