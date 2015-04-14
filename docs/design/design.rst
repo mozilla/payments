@@ -5,6 +5,13 @@ Overall design documentation.
 
 Status: **in draft** expect changes.
 
+Purchase flow - FxA
+-------------------
+
+The flow of OAuth tokens for the purchase flow to allow for a seamless login.
+
+.. image:: buy-flow-fxa.png
+
 Purchase flow
 -------------
 
