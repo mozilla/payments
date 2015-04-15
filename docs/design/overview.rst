@@ -8,7 +8,7 @@ A Payments service for Mozilla that accepts payments for Mozilla properties or
 services and directs the money to Mozilla.
 
 Compared to Marketplace Payments
---------------------------------
+++++++++++++++++++++++++++++++++
 
 This is quite different from Marketplace payments in a few key areas, namely:
 
@@ -28,8 +28,7 @@ This is quite different from Marketplace payments in a few key areas, namely:
   of these apps is somewhat out of our control so our own threat model must
   account for malicious or compromised apps.
 
-* The Marketplace payment service competes with every other web based payment
-   system available.
+* The Marketplace payment service competes with every other web based payment system available.
 
 * Marketplace payments are designed primarily for carrier billing on mobile.
 
@@ -38,7 +37,7 @@ This is quite different from Marketplace payments in a few key areas, namely:
   payment provider like Stripe or Bango.
 
 Do we need to use mozPay?
--------------------------
++++++++++++++++++++++++++
 
 Nope. `mozPay <https://wiki.mozilla.org/WebAPI/WebPayment>`_ only exists on
 Firefox OS and Android. Further, mozPay puts users straight into the
@@ -64,13 +63,12 @@ no particular order:
 * Provide a management interface for users that allows them to alter payment
   details, see purchase history and so on across all services.
 
-Components
-==========
+.. _components-label:
+
+Front end components
+====================
 
 There would be at least three main front end components.
-
-Front end
----------
 
 Library
 +++++++
@@ -107,8 +105,8 @@ Firefox Accounts profile page.
 * *Uptime* :high, this doesn't stop purchasing work but prevents later
   management.
 
-Back end
---------
+Back end components
+===================
 
 Solitude
 ++++++++
