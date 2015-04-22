@@ -83,9 +83,7 @@ When a new credit card is added event, it’s immediately visible on the purchas
 
 .. image:: ux-add-new-card-wireframe.png
 
-There’s no need to send an email unless we’re concerned about unauthorised
-access. (For example, Facebook would tell you if you’re signed in from an
-unknown device.)
+There’s no need to send an email unless we’re concerned about unauthorised access. (For example, Facebook would tell you if you’re signed in from an unknown device.)
 
 Payment method updated for subscription
 +++++++++++++++++++++++++++++++++++++++
@@ -113,7 +111,7 @@ This makes a separate “You’re subscribed to [product]” email unnecessary.
 Subscription charge succeeded
 +++++++++++++++++++++++++++++
 
-The reception of email receipt indicates that the charge was succeeded.
+The reception of email receipt already indicates that the charge was succeeded. No need to send a separate email.
 
 Subscription charge failed
 ++++++++++++++++++++++++++
