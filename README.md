@@ -1,4 +1,4 @@
-[![Stories in progress](https://badge.waffle.io/mozilla/payments.png?label=working on&title=In Progess)](https://waffle.io/mozilla/payments)
+[![Stories in progress](https://badge.waffle.io/mozilla/payments.png?label=In Progress&title=Cards In Progess)](https://waffle.io/mozilla/payments)
 
 # General root documentation for all Payments.
 
