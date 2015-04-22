@@ -81,9 +81,11 @@ Payment method created
 
 When a new credit card is added event, it’s immediately visible on the purchase flow:
 
-.. image:: payment-method-created.png
+.. image:: ux-add-new-card-wireframe.png
 
-There’s no need to send an email unless we’re concerned about unauthorised access. (For example, Facebook would tell you if you’re signed in from an unknown device.)
+There’s no need to send an email unless we’re concerned about unauthorised
+access. (For example, Facebook would tell you if you’re signed in from an
+unknown device.)
 
 Payment method updated for subscription
 +++++++++++++++++++++++++++++++++++++++
@@ -92,7 +94,7 @@ Gist: each subscription can be paid with different credit cards. When the credit
 
 * If card is updated then immediately used to pay, email receipt will contain the new card information, so no need for separate notification.
 
-.. image:: email-receipt.png
+.. image:: ux-email-receipt-highlight-payment-method.png
 
 * If card is updated but not used to pay until sometime afterwards, should we let user know? Probably not.
 
@@ -104,14 +106,14 @@ Subscription created
 
 This notification is already contained within the email receipt. A subscription receipt will have an extra field that says “Next payment":
 
-.. image:: receipt.png
+.. image:: ux-email-receipt-highlight-next-payment.png
 
 This makes a separate “You’re subscribed to [product]” email unnecessary.
 
 Subscription charge succeeded
 +++++++++++++++++++++++++++++
 
-The reception of email receipt already indicates that the charge was succeeded. No need to send a separate email.
+The reception of email receipt indicates that the charge was succeeded.
 
 Subscription charge failed
 ++++++++++++++++++++++++++
@@ -122,6 +124,8 @@ This will need email notification. It should at the very least specify:
 * Amount
 * Payment method used
 * Link to fix it
+
+.. image:: ux-email-receipt-subscription-charge-failed.png
 
 On the link to fix it, user can do these things:
 
@@ -147,7 +151,7 @@ I think this is a job that can be accomplished using a really good subscription 
 
 Summary
 -------
-Sould we send email notification during this event?
+Should we send email notification during this event?
 
 * Payment method created: no
 * Payment method updated for subscription: no
