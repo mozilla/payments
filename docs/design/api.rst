@@ -77,32 +77,45 @@ emails, or other method, or ignored.
 TODO: figure out how solitude would signal out these events.
 
 Payment method created
-----------------------
-When a new credit card is added event, it’s [immediately visible on the purchase flow](https://cloud.githubusercontent.com/assets/51007/7153010/dcfa48c2-e399-11e4-9607-201c1b630db0.PNG).
+++++++++++++++++++++++
+
+When a new credit card is added event, it’s immediately visible on the purchase flow:
+
+.. image:: ux-add-new-card-wireframe.png
 
 There’s no need to send an email unless we’re concerned about unauthorised access. (For example, Facebook would tell you if you’re signed in from an unknown device.)
 
 Payment method updated for subscription
----------------------------------------
++++++++++++++++++++++++++++++++++++++++
+
 Gist: each subscription can be paid with different credit cards. When the credit card change, should we send an email that says “This subscription is now paid using B instead of A”?
 
-* If card is updated then immediately used to pay, email receipt will contain [the new card information](https://cloud.githubusercontent.com/assets/51007/7152988/8ffdeb00-e399-11e4-820f-4d6d60c4df01.PNG) in it. No need for separate notification.
+* If card is updated then immediately used to pay, email receipt will contain the new card information, so no need for separate notification.
+
+.. image:: ux-email-receipt-highlight-payment-method.png
+
 * If card is updated but not used to pay until sometime afterwards, should we let user know? Probably not.
+
   * First of all, card is always updated manually, so user always know that it has happened
-  * Secondly, when the email receipt comes a few days/weeks later, it will contain [the new card information](https://cloud.githubusercontent.com/assets/51007/7152988/8ffdeb00-e399-11e4-820f-4d6d60c4df01.PNG) in it
+  * Secondly, when the email receipt comes a few days/weeks later, it will contain the new card information in it.
 
 Subscription created
---------------------
-This notification is already contained within the email receipt. A subscription receipt will have an extra field that says “[Next payment](https://cloud.githubusercontent.com/assets/51007/7153036/4574742c-e39a-11e4-8e90-be13437994c3.PNG)”.
+++++++++++++++++++++
+
+This notification is already contained within the email receipt. A subscription receipt will have an extra field that says “Next payment":
+
+.. image:: ux-email-receipt-highlight-next-payment.png
 
 This makes a separate “You’re subscribed to [product]” email unnecessary.
 
 Subscription charge succeeded
------------------------------
++++++++++++++++++++++++++++++
+
 The reception of email receipt already indicates that the charge was succeeded. No need to send a separate email.
 
 Subscription charge failed
---------------------------
+++++++++++++++++++++++++++
+
 This will need email notification. It should at the very least specify:
 
 * Subscription name/logo
@@ -110,21 +123,25 @@ This will need email notification. It should at the very least specify:
 * Payment method used
 * Link to fix it
 
+.. image:: ux-email-receipt-subscription-charge-failed.png
+
 On the link to fix it, user can do these things:
 
 * Try again with the same method
 * Edit method, then try again
+
   * Change it with another method that’s already stored
   * Add a new method, then use it
 
 I’m not sure where this link should lead to. Should it lead to the buy flow iframe, or the payments dashboard instead? I am tempted to keep things really simple and just rely on the buy flow for everything.
 
 Subscription cancelled
-----------------------
+++++++++++++++++++++++
 No email necessary, but on the subscription cancellation UI (this is relevant in the Dashboard), we should acknowledge two things:
 
 * Reassure user that the payment method is not going to be charged again
 * Reiterate whether the subscription is still valid or not
+
   * If still valid, then until when? Give exact date
   * If not valid, then we should let it know that subscription will cease the moment user clicks “cancel”
 
@@ -132,7 +149,7 @@ I think this is a job that can be accomplished using a really good subscription 
 
 Summary
 -------
-Sould we send email notification during this event?
+Should we send email notification during this event?
 
 * Payment method created: no
 * Payment method updated for subscription: no
