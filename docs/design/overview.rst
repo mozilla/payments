@@ -75,7 +75,7 @@ Why not use that?
 * We still need to make an iframe, do the auth and wrap everything up to show
   the drop-in ui.
 * We are able to re-use open sourced components of Braintrees flow anyway. For
-  example: `card validator <https://github.com/braintree/card-validator>`.
+  example: `card validator <https://github.com/braintree/card-validator>`_.
 * We lose the ability to track events on that form, do A/B testing and other
   improvements.
 
