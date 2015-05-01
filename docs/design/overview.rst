@@ -63,6 +63,30 @@ no particular order:
 * Provide a management interface for users that allows them to alter payment
   details, see purchase history and so on across all services.
 
+Why not the drop-in UI?
++++++++++++++++++++++++
+
+Braintree provides a `drop-in UI <https://developers.braintreepayments.com/guides/drop-in>`_.
+Why not use that?
+
+* At the moment Braintree doesn't support localisations. "Language support for
+  18 languages on iOS and Android; English-only for web". It may in the future.
+* The form won't be consistent with the Firefox Accounts UX
+* We still need to make an iframe, do the auth and wrap everything up to show
+  the drop-in ui.
+* We are able to re-use open sourced components of Braintrees flow anyway. For
+  example: `card validator <https://github.com/braintree/card-validator>`.
+* We lose the ability to track events on that form, do A/B testing and other
+  improvements.
+
+Other minor issues include:
+
+* It means properties using the service have to trust the Braintree domain for
+  loading resource as it alters the DOM. Just trusting our domain allows us
+  to control the payment flow to meet Mozilla security standards.
+* Complete control over the payment flow has historically been missing in
+  previous implementations, this has actually cost Mozilla time and effort [*]_
+
 .. _components-label:
 
 Front end components
@@ -80,7 +104,7 @@ the completed flow.
 * *UX*: none
 * *Documentation*: ...
 * *Repository*: ...
-* *Uptime*: will be hosted on the site selling the product.
+* *Uptime requirements*: will be hosted on the site selling the product.
 
 Buy flow
 ++++++++
@@ -89,8 +113,8 @@ Shown in an iframe to the end user. Triggered by the library.
 
 * *UX*: :ref:`buy flow <purchase-label>`
 * *Documentation*: ...
-* *Repository*: ...
-* *Uptime*: very high, if this goes out, purchasing will fail. Based also upon
+* *Repository*: https://github.com/mozilla/payment-ui
+* *Uptime requirements*: very high, if this goes out, purchasing will fail. Based also upon
   the uptime of the payment provider and all the stacks inbetween.
 
 Management screens
@@ -102,11 +126,27 @@ Firefox Accounts profile page.
 * *UX*: ...
 * *Documentation*: ...
 * *Repository*:
-* *Uptime* :high, this doesn't stop purchasing work but prevents later
-  management.
+* *Uptime requirements*: high, this doesn't stop purchasing work but prevents
+  later management.
 
 Back end components
 ===================
+
+Environment
++++++++++++
+
+Contains the environment for running the services.
+
+* *Repository*: https://github.com/mozilla/payments-env
+
+Service
++++++++
+
+Does authentication and acts a broker between the buy flow and solitude.
+
+* *Documentation*: `service docs <http://payments-service.readthedocs.org/en/latest/>`_
+* *Repository*: https://github.com/mozilla/payments-service
+* *Uptime requirements*: very high.
 
 Solitude
 ++++++++
@@ -116,4 +156,6 @@ provider.
 
 * *Documentation*: `solitude docs <https://solitude.readthedocs.org>`_
 * *Repository*: https://github.com/mozilla/solitude
-* *Uptime*: very high.
+* *Uptime requirements*: very high.
+
+.. [*] Further information available internally to Mozilla.
