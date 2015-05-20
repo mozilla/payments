@@ -101,9 +101,9 @@ Added to the site selling the product. The library allows the selling site to
 easily bring up the iframe for completing the payment flow and then processing
 the completed flow.
 
-* *UX*: none
+* *UX*: :ref:`buy flow <purchase-label>`
 * *Documentation*: ...
-* *Repository*: ...
+* *Repository*: https://github.com/mozilla/payments-client
 * *Uptime requirements*: will be hosted on the site selling the product.
 
 Buy flow
@@ -113,7 +113,7 @@ Shown in an iframe to the end user. Triggered by the library.
 
 * *UX*: :ref:`buy flow <purchase-label>`
 * *Documentation*: ...
-* *Repository*: https://github.com/mozilla/payment-ui
+* *Repository*: https://github.com/mozilla/payments-ui
 * *Uptime requirements*: very high, if this goes out, purchasing will fail. Based also upon
   the uptime of the payment provider and all the stacks inbetween.
 
@@ -128,6 +128,15 @@ Firefox Accounts profile page.
 * *Repository*:
 * *Uptime requirements*: high, this doesn't stop purchasing work but prevents
   later management.
+
+Example site
+++++++++++++
+
+An example site that shows how
+
+* *Repository*: https://github.com/mozilla/payments-example
+* *Uptime requirements*: none, its an example.
+
 
 Back end components
 ===================
