@@ -111,7 +111,7 @@ This makes a separate “You’re subscribed to [product]” email unnecessary.
 Subscription charge succeeded
 +++++++++++++++++++++++++++++
 
-The reception of email receipt already indicates that the charge was succeeded. No need to send a separate email.
+When a subscription charge succeeds, a receipt is sent.
 
 Subscription charge failed
 ++++++++++++++++++++++++++
