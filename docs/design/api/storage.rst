@@ -3,9 +3,9 @@ Storage API
 
 For this examples let's say:
 
-- Buyers logs with Firefox Account Bearer Tokens
-- Seller apps logs with Hawk
-- Payment App logs with Basic Auth
+- Buyers log into the service with Firefox Account Bearer Tokens
+- Seller apps log into the service with Hawk
+- Payment App log into the service with Basic Auth
 
 
 As a user, I want to retrieve my information about my purchases
@@ -53,6 +53,9 @@ As a user, I want to retrieve my information about my purchases
 
     :statuscode 200: Ok no error.
 
+Here the filtering on the user id is implicit because we are connected
+as the buyer and she can only retrieve records she has got access
+to.
 
 
 As the payments app, I want to submit new payment information for a given user
@@ -133,6 +136,8 @@ As the payments app, I want to remove an existing payment from the system
 As the payments app, I want to edit an existing payment
 =======================================================
 
+Replace the existing record, using PUT:
+
 .. http:put:: /buckets/(bucket_id)/collections/(collection_id)/records/(record_id)
 
     **Example request**:
@@ -177,6 +182,9 @@ As the payments app, I want to edit an existing payment
         }
 
     :statuscode 200: Ok, no error
+
+
+Modify some fields of the existing record using PATCH:
 
 .. http:patch:: /buckets/(bucket_id)/collections/(collection_id)/records/(record_id)
 
@@ -266,7 +274,7 @@ You'll need to do a BATCH operation with all the sub-operations in there.
     :statuscode 200: Ok, no error
 
 
-- Then run a BATCH requests.
+- Then run a BATCH request:
 
 If you want to add the ``read`` permission for the seller app to all
 records of the app, you could use:
@@ -434,4 +442,4 @@ As the selling application I should not be able to edit / add purchases
     :statuscode 403: Forbidden, the authenticated app cannot modifiy this record.
 
 
-Basically an operation on something not authorized will result in a 403.
+Any unauthorized operation will return a 403 HTTP response.
