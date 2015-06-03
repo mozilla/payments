@@ -11,6 +11,7 @@ Contents:
    design/api.rst
    design/design.rst
    design/ux.rst
+   testing.rst
    onboarding.rst
 
 This is the general root documentation source for all Payments for Firefox
