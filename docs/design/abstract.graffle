@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {576, 733}}</string>
+		<string>{{0, 0}, {576.00002670288086, 733}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -57,14 +57,49 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
+				<integer>4</integer>
+			</dict>
+			<key>ID</key>
+			<integer>47</integer>
+			<key>Points</key>
+			<array>
+				<string>{286.5180291391934, 117.49999994842997}</string>
+				<string>{286.53323443741613, 152.50000015322635}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<true/>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>TailArrow</key>
+					<string>FilledArrow</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>3</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
 				<integer>45</integer>
 			</dict>
 			<key>ID</key>
 			<integer>46</integer>
 			<key>Points</key>
 			<array>
-				<string>{226.07196599382468, 396.76571711428244}</string>
-				<string>{147.42552438164006, 349.28181215320456}</string>
+				<string>{226.07258167600594, 396.56975568655599}</string>
+				<string>{147.42694482872366, 348.83081111875111}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -153,8 +188,8 @@
 			<integer>43</integer>
 			<key>Points</key>
 			<array>
-				<string>{286.25041936518045, 474.74999095854605}</string>
-				<string>{286.02038386076873, 513.00003932520508}</string>
+				<string>{286.1828309760142, 474.74998542097637}</string>
+				<string>{285.89050010679665, 513.00002213065022}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -472,8 +507,8 @@
 			<integer>36</integer>
 			<key>Points</key>
 			<array>
-				<string>{226.00000677504283, 193.68494069555447}</string>
-				<string>{147.49996420955199, 193.27614447110423}</string>
+				<string>{226.00000023345621, 193.94031386967839}</string>
+				<string>{147.499998739126, 193.86286988062849}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -528,8 +563,8 @@
 			<integer>15</integer>
 			<key>Points</key>
 			<array>
-				<string>{439.50000039653605, 193.9238682332836}</string>
-				<string>{346.99999746182601, 193.80746842021173}</string>
+				<string>{439.49999999957038, 193.98809597599686}</string>
+				<string>{346.99999992009543, 193.96989560870381}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -586,8 +621,8 @@ tokeniser\
 			<integer>12</integer>
 			<key>Points</key>
 			<array>
-				<string>{439.50000019805941, 312.05513591078125}</string>
-				<string>{346.99999869209074, 312.13943461899601}</string>
+				<string>{439.49999999978519, 312.00862109517664}</string>
+				<string>{346.99999996004664, 312.02180210846888}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -621,8 +656,8 @@ tokeniser\
 			<integer>10</integer>
 			<key>Points</key>
 			<array>
-				<string>{322.0973771072205, 513.12548756528349}</string>
-				<string>{463.40336991217299, 353.37451581449716}</string>
+				<string>{322.09725506062517, 513.12548699766194}</string>
+				<string>{463.40277655904418, 353.37451313763967}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -678,8 +713,8 @@ provider\
 			<integer>35</integer>
 			<key>Points</key>
 			<array>
-				<string>{226.06802476891809, 111.22440472983762}</string>
-				<string>{147.42660965264434, 157.06267203767263}</string>
+				<string>{226.06933795354743, 111.64529712782411}</string>
+				<string>{147.42965050561779, 158.03126958276636}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -812,7 +847,7 @@ provider\
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-05-20 23:04:29 +0000</string>
+	<string>2015-06-03 20:42:17 +0000</string>
 	<key>Modifier</key>
 	<string>Andy McKay</string>
 	<key>NotesVisible</key>
@@ -843,12 +878,22 @@ provider\
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{612, 792}</string>
+			<string>{612.00002670288086, 792}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
 			<string>int</string>
 			<string>0</string>
+		</array>
+		<key>NSPrinter</key>
+		<array>
+			<string>coded</string>
+			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAlOU1ByaW50ZXIAhIQITlNPYmplY3QAhZKEhIQITlNTdHJpbmcBlIQBKxxDYW5vbiBNRjQzMjAtNDM1MCAoVUZSSUkgTFQphoY=</string>
+		</array>
+		<key>NSPrinterName</key>
+		<array>
+			<string>string</string>
+			<string>Canon MF4320-4350 (UFRII LT)</string>
 		</array>
 		<key>NSRightMargin</key>
 		<array>
