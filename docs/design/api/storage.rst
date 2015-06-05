@@ -293,7 +293,7 @@ records of the app, you could use:
             "data": {
               "permissions": {
                 "read": [
-                  "+hawk:144c22a77d75937740ec3c957fbdb1d1"
+                  "hawk:144c22a77d75937740ec3c957fbdb1d1"
                 ]
               }
             },
