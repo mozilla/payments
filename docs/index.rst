@@ -8,7 +8,7 @@ Contents:
 
    contributing.rst
    design/overview.rst
-   design/api.rst
+   design/api/index.rst
    design/design.rst
    design/ux.rst
    testing.rst
