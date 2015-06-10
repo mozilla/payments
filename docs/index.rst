@@ -20,7 +20,8 @@ Accounts.
 Filing bugs:
 
 * Github on :ref:`each repository <components-label>` or `this repository <https://github.com/mozilla/payments/issues>`_ (preferred).
-* `Bugzilla <https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Services&component=Payments>`_ in the ``Mozilla Services`` > ``Payments``.
+* `Bugzilla <https://bugzilla.mozilla.org/enter_bug.cgi?product=Cloud%20Services&component=Payments>`_ in the ``Cloud Services`` > ``Payments``.
+* `For IT issues <https://bugzilla.mozilla.org/enter_bug.cgi?product=Cloud%20Services&component=Operations:%20Marketplace>`_ in the ``Cloud Services`` > ``Operations: Marketplace``.
 
 Other:
 
