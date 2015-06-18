@@ -58,7 +58,7 @@ Invalid Secure Payment Data
 
     .. code-block:: json
 
-        {"braintree": {"__all__": [{"message": "Invalid Secure Payment Data", "code": "2078"}]}
+        {"braintree": {"__all__": [{"message": "Invalid Secure Payment Data", "code": "2078"}]}}
 
 Specific errors
 ---------------
@@ -114,3 +114,81 @@ Expiry is invalid
     .. code-block:: json
 
         {"braintree": {"expiration_date": [{"message": "Expiration date is invalid.", "code": "81710"}]}}
+
+Generating webhooks
+-------------------
+
+A webhook is an event sent by Braintree to certain events.
+
+.. note:: If you are in development and reseting your database,
+          subscriptions and webhooks in Braintree may not be in sync
+          with your local database. Causing webhooks that are no longer
+          relevant to be sent to your local servers.
+
+Configuring braintree
++++++++++++++++++++++
+
+When you are using the sandbox go to Settings > Webhooks. Add in your server,
+for example::
+
+    http://pay.dev.mozaws.net:8000/api/braintree/webhook/
+
+You can select all "notifications to send" or just pick the ones we actually
+process which are: Subscription Canceled, Subscription Charged Successfully
+and Subscription Charged Unsuccessfully.
+
+If you are doing local development, you might need to expose your local server
+publicly. Something like `ngrok <http://ngrok.com>`_ can do this easily by
+entering::
+
+    ngrok pay.dev:8000
+
+Then enter the corresponding URL into the Braintree sandbox.
+
+Sending webhooks manually
++++++++++++++++++++++++++
+
+We have a tool to send webhook requests from the command line. This is a
+development tool and is not designed to be a complete replacement for proper
+end-to-end testing with Braintree. In all cases, Braintree is right and this
+tool is wrong.
+
+.. note:: To use this tool, the solitude container needs to make a request to the
+          payments-service server, usually this means http://pay.dev:8000/, you might need
+          to use an IP address if that doesn't resolve.
+
+Inside the solitude container run::
+
+    python manage.py braintree_webhook --parse=subscription_charged_successfully --subscription_id=latest
+
+This will generate and send a `subscription_charged_successfully` webhook to
+the payments-service for the last subscription added to the database.
+
+See the code in `solitude <https://github.com/mozilla/solitude/blob/master/lib/brains/management/commands/braintree_webhook.py>`_
+ for more options.
+
+subscription_charged_successfully
++++++++++++++++++++++++++++++++++
+
+To generate this, simply complete a purchase within payments. We'll immediately
+try to create subscription and charge the credit card. If that completes then
+his webhook will be sent.
+
+This can also be run from the command line.
+
+subscription_charged_unsuccessfully
++++++++++++++++++++++++++++++++++++
+
+To generate this, go to the Braintree sandbox and alter the plan you are testing
+with to cost $2708 and have a one day trial period. Purchase the product. Then
+in one day you will get a webhook.
+
+This can also be run from the command line, without delay.
+
+subscription_canceled
++++++++++++++++++++++++++++++++++
+
+To generate this, go to the Braintree sandbox, select Subscriptions, search for
+the subscription you'd like to cancel and then click "Cancel".
+
+This can also be run from the command line.
