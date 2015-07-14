@@ -102,7 +102,7 @@ easily bring up the iframe for completing the payment flow and then processing
 the completed flow.
 
 * *UX*: :ref:`buy flow <purchase-label>`
-* *Documentation*: ...
+* *Documentation*: https://github.com/mozilla/payments-client/blob/master/README.md
 * *Repository*: https://github.com/mozilla/payments-client
 * *Uptime requirements*: will be hosted on the site selling the product.
 
@@ -112,7 +112,7 @@ Buy flow
 Shown in an iframe to the end user. Triggered by the library.
 
 * *UX*: :ref:`buy flow <purchase-label>`
-* *Documentation*: ...
+* *Documentation*: https://github.com/mozilla/payments-ui/blob/master/README.md
 * *Repository*: https://github.com/mozilla/payments-ui
 * *Uptime requirements*: very high, if this goes out, purchasing will fail. Based also upon
   the uptime of the payment provider and all the stacks inbetween.
@@ -123,9 +123,9 @@ Management screens
 Shown as a standard set of pages. Accessible at a URL and linked from the
 Firefox Accounts profile page.
 
-* *UX*: ...
-* *Documentation*: ...
-* *Repository*:
+* *UX*: :ref:`buy flow <purchase-label>`
+* *Documentation*: https://github.com/mozilla/payments-ui/blob/master/README.md
+* *Repository*: https://github.com/mozilla/payments-ui
 * *Uptime requirements*: high, this doesn't stop purchasing work but prevents
   later management.
 
@@ -146,6 +146,7 @@ Environment
 
 Contains the environment for running the services.
 
+* *Documentation*: https://github.com/mozilla/payments-env/blob/master/README.md
 * *Repository*: https://github.com/mozilla/payments-env
 
 Service

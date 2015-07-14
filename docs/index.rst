@@ -6,11 +6,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   contributing.rst
    design/overview.rst
-   design/api/index.rst
+   contributing.rst
    design/design.rst
    design/ux.rst
+   design/emails.rst
+   design/api/index.rst
    testing.rst
    onboarding.rst
 

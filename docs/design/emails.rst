@@ -1,27 +1,8 @@
-Backend API
-===========
-
-Solitude API
-------------
-
-The back end API for payments is `solitude <http://solitude.readthedocs.org>`_
-and its `documentation <http://solitude.readthedocs.org/en/latest/topics/braintree.html>`_
-has the API for connecting to Braintree. Solitude makes the Braintree calls and
-stores a bit of information about the response in its database so faster access.
-
-Braintree interaction
-+++++++++++++++++++++
-
-This is an example flow of creating a customer, a payment method and a
-subscription to a plan:
-
-.. image:: start-subscription.png
-
-Events
+Emails
 ------
 
-The backend will need to send the following events, these might be sent as
-emails, or other method, or ignored.
+The backend will need to send the following events to subscribers. Usually as emails.
+These might be sent as emails, or other method, or ignored.
 
 * Payment method created.
 * Payment method updated for subscription.
@@ -30,25 +11,25 @@ emails, or other method, or ignored.
 * Subscription charge failed.
 * Subscription cancelled.
 
-TODO: figure out how solitude would signal out these events.
-
 Payment method created
 ++++++++++++++++++++++
 
-When a new credit card is added event, it’s immediately visible on the purchase flow:
+When a new credit card is added event, it’s immediately visible on the management pages.
 
-.. image:: ux-add-new-card-wireframe.png
+TODO: the image below is out of date.
+
+.. image:: api/ux-add-new-card-wireframe.png
 
 There’s no need to send an email unless we’re concerned about unauthorised access. (For example, Facebook would tell you if you’re signed in from an unknown device.)
 
 Payment method updated for subscription
 +++++++++++++++++++++++++++++++++++++++
 
-Gist: each subscription can be paid with different credit cards. When the credit card change, should we send an email that says “This subscription is now paid using B instead of A”?
+Gist: each subscription can be paid with different credit cards. When the credit card changes, should we send an email that says “This subscription is now paid using B instead of A”?
 
 * If card is updated then immediately used to pay, email receipt will contain the new card information, so no need for separate notification.
 
-.. image:: ux-email-receipt-highlight-payment-method.png
+.. image:: api/ux-email-receipt-highlight-payment-method.png
 
 * If card is updated but not used to pay until sometime afterwards, should we let user know? Probably not.
 
@@ -60,7 +41,7 @@ Subscription created
 
 This notification is already contained within the email receipt. A subscription receipt will have an extra field that says “Next payment":
 
-.. image:: ux-email-receipt-highlight-next-payment.png
+.. image:: api/ux-email-receipt-highlight-next-payment.png
 
 This makes a separate “You’re subscribed to [product]” email unnecessary.
 
@@ -79,7 +60,7 @@ This will need email notification. It should at the very least specify:
 * Payment method used
 * Link to fix it
 
-.. image:: ux-email-receipt-subscription-charge-failed.png
+.. image:: api/ux-email-receipt-subscription-charge-failed.png
 
 On the link to fix it, user can do these things:
 
@@ -93,7 +74,13 @@ I’m not sure where this link should lead to. Should it lead to the buy flow if
 
 Subscription cancelled
 ++++++++++++++++++++++
-No email necessary, but on the subscription cancellation UI (this is relevant in the Dashboard), we should acknowledge two things:
+Subscription cancellation can happen without the users being present. For example the default flow is something like:
+
+* charge fails, notify user
+* 10 days later, charge fails, notify user
+* 20 days later, charge fails, cancel subscription.
+
+In the UI and other elements, we should:
 
 * Reassure user that the payment method is not going to be charged again
 * Reiterate whether the subscription is still valid or not
@@ -101,15 +88,13 @@ No email necessary, but on the subscription cancellation UI (this is relevant in
   * If still valid, then until when? Give exact date
   * If not valid, then we should let it know that subscription will cease the moment user clicks “cancel”
 
-I think this is a job that can be accomplished using a really good subscription cancellation UI. It should say “Your subscription will be valid until [date]/Your subscription will instantly terminate. [Keep my subscription/Cancel]”
-
 Summary
--------
++++++++
 Should we send email notification during this event?
 
 * Payment method created: no
 * Payment method updated for subscription: no
 * Subscription created: no
-* Subscription charge succeeded (e.g. every month): no
+* Subscription charge succeeded (e.g. every month): yes
 * Subscription charge failed: yes
-* Subscription cancelled: no
+* Subscription cancelled: yes

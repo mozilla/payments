@@ -1,9 +1,8 @@
-Proposed backend API
+APIs
 ====================
 
 .. toctree::
    :maxdepth: 2
 
    payments
-   provider
    storage
