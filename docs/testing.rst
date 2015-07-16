@@ -8,8 +8,8 @@ access to the Braintree sandbox for the server in question.
 
 For all the following errors, the error documentation at Braintree is definitive.
 
-Example error
--------------
+Errors
+------
 
 An error returned by the API in `payments-service <http://payments-service.readthedocs.org/en/latest/topics/api.html#errors>`_:
 

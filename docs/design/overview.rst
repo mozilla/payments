@@ -7,6 +7,11 @@ What is it?
 A Payments service for Mozilla that accepts payments for Mozilla properties or
 services and directs the money to Mozilla.
 
+Show me an example!
++++++++++++++++++++
+
+We've got a demo site, :ref:`details here <development-label>`.
+
 Compared to Marketplace Payments
 ++++++++++++++++++++++++++++++++
 
@@ -136,7 +141,6 @@ An example site that shows how
 
 * *Repository*: https://github.com/mozilla/payments-example
 * *Uptime requirements*: none, its an example.
-
 
 Back end components
 ===================
