@@ -13,6 +13,8 @@ Contents:
    design/emails.rst
    design/api/index.rst
    testing.rst
+   localisation.rst
+   servers.rst
    onboarding.rst
 
 This is the general root documentation source for all Payments for Firefox
