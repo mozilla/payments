@@ -74,14 +74,11 @@ I’m not sure where this link should lead to. Should it lead to the buy flow if
 
 Subscription cancelled
 ++++++++++++++++++++++
-
 Subscription cancellation can happen without the users being present. For example the default flow is something like:
 
 * charge fails, notify user
 * 10 days later, charge fails, notify user
 * 20 days later, charge fails, cancel subscription.
-
-.. image:: api/ux-email-receipt-subscription-cancelled.png
 
 In the UI and other elements, we should:
 
