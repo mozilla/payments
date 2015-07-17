@@ -80,6 +80,8 @@ Subscription cancellation can happen without the users being present. For exampl
 * 10 days later, charge fails, notify user
 * 20 days later, charge fails, cancel subscription.
 
+.. image:: api/ux-email-receipt-subscription-cancelled.png
+
 In the UI and other elements, we should:
 
 * Reassure user that the payment method is not going to be charged again
