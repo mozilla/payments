@@ -28,7 +28,7 @@ As a user, I want to retrieve my information about my purchases
         Content-Type: application/json; charset=UTF-8
 
         {
-          "items": [
+          "data": [
             {
                 "id": "dc86afa9-a839-4ce1-ae02-3d538b75496f",
                 "last_modified": 1432024555580,
@@ -247,7 +247,7 @@ You'll need to do a BATCH operation with all the sub-operations in there.
         HTTP/1.1 200 OK
 
         {
-          "items": [
+          "data": [
             {
                 "id": "dc86afa9-a839-4ce1-ae02-3d538b75496f",
                 "last_modified": 1432024555580,
@@ -329,7 +329,7 @@ As the selling application I want to be able to access the purchase information 
         HTTP/1.1 200 OK
 
         {
-          "items": [
+          "data": [
             {
                 "id": "dc86afa9-a839-4ce1-ae02-3d538b75496f",
                 "last_modified": 1432024555580,
@@ -365,7 +365,7 @@ As the selling application, I cannot access other selling applications payments
         HTTP/1.1 200 OK
 
         {
-          "items": []
+          "data": []
         }
 
     :query seller: Filter on the seller app identifier
