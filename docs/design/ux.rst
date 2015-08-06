@@ -45,7 +45,8 @@ Flow chart:
 
 Wireframe of flow:
 
-.. image:: ux-management-wireframe.png
+.. image:: ux-management-wireframe-wide.png
+.. image:: ux-management-wireframe-narrow.png
 
 Replace all subscriptions:
 
