@@ -27,7 +27,11 @@ TODO
 Product setup and configuration
 ===============================
 
-TODO
+To implement, you'll need to:
+
+* :ref:`Complete product configuration <configuration-label>`
+* :ref:`Add client to your project <client-label>`
+* Call the appropriate APIs to start a purchase
 
 Testing
 =======

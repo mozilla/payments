@@ -1,4 +1,4 @@
-Payment API
+Backend API
 -----------
 
 The payments-ui interacts with payments-service,
