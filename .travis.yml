@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+sudo: false
+install:
+  - pip install -r requirements/docs.txt
+script: make -C docs/ html linkcheck
+notifications:
+  irc:
+    channels:
+      - "irc.mozilla.org#amo-bots"
+    on_success: change
+    on_failure: always

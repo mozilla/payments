@@ -71,7 +71,7 @@ no particular order:
 Why not the drop-in UI?
 +++++++++++++++++++++++
 
-Braintree provides a `drop-in UI <https://developers.braintreepayments.com/guides/drop-in>`_.
+Braintree provides a `drop-in UI <https://developers.braintreepayments.com/ios+ruby/guides/drop-in>`_.
 Why not use that?
 
 * At the moment Braintree doesn't support localisations. "Language support for
@@ -168,7 +168,7 @@ Solitude
 Stores a limited amount of payment information and interacts with the payment
 provider.
 
-* *Documentation*: `solitude docs <https://solitude.readthedocs.org>`_
+* *Documentation*: `solitude docs <https://solitude.readthedocs.org/en/latest/>`_
 * *Repository*: https://github.com/mozilla/solitude
 * *Uptime requirements*: very high.
 

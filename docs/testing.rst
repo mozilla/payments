@@ -128,17 +128,15 @@ A webhook is an event sent by Braintree to certain events.
 Configuring braintree
 +++++++++++++++++++++
 
-When you are using the sandbox go to Settings > Webhooks. Add in your server,
-for example::
-
-    http://pay.dev.mozaws.net:8000/api/braintree/webhook/
+When you are using the sandbox go to Settings > Webhooks. Add in your server.
+For example: ``http://pay.dev.mozaws.net:8000/api/braintree/webhook/``
 
 You can select all "notifications to send" or just pick the ones we actually
 process which are: Subscription Canceled, Subscription Charged Successfully
 and Subscription Charged Unsuccessfully.
 
 If you are doing local development, you might need to expose your local server
-publicly. Something like `ngrok <http://ngrok.com>`_ can do this easily by
+publicly. Something like `ngrok <https://ngrok.com>`_ can do this easily by
 entering::
 
     ngrok pay.dev:8000
@@ -154,8 +152,8 @@ end-to-end testing with Braintree. In all cases, Braintree is right and this
 tool is wrong.
 
 .. note:: To use this tool, the solitude container needs to make a request to the
-          payments-service server, usually this means http://pay.dev:8000/, you might need
-          to use an IP address if that doesn't resolve.
+          payments-service server, usually this means ``http://pay.dev:8000/``,
+          you might need to use an IP address if that doesn't resolve.
 
 Inside the solitude container run::
 

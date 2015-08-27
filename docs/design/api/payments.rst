@@ -1,11 +1,13 @@
 Backend API
 -----------
 
-The payments-ui interacts with payments-service,
-its `API docs <https://payments-service.readthedocs.org/en/latest/>`_ provide
-details on how to complete all the tasks needed to complete a payment.
+The payments-ui interacts with
+the `payments-service <https://payments-service.readthedocs.org/en/latest/>`_ API
+to handle transactions and perform management functions.
 
-Payments-service provides the authentication layer around solitude. The
-`API docs <https://solitude.readthedocs.org/en/latest/>`_ for solitude shows
-how to interact with the
-`payment provider <https://solitude.readthedocs.org/en/latest/topics/braintree.html>`_.
+Payments-service provides the authentication layer around
+`Solitude <https://solitude.readthedocs.org/en/latest/>`_.
+
+See the
+`Solitude Braintree docs <https://solitude.readthedocs.org/en/latest/topics/braintree.html>`_
+for information about the payment gateway.
